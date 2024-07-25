@@ -1,0 +1,149 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  background: url('/background/fundo.jpeg') no-repeat center center;
+  background-size: cover;
+  /* margin: 0; e padding: 0;: Remove as margens e espaçamentos padrões do navegador.
+     width: 100vw; e height: 100vh;: Define a largura e a altura do body para 100% da largura e altura da viewport.
+     background: Define a imagem de fundo.
+     url('caminho/para/sua/imagem.jpg'): Caminho para sua imagem de fundo.
+     no-repeat: Impede a repetição da imagem.
+     center center: Centraliza a imagem.
+     background-size: cover;: Faz com que a imagem cubra toda a área disponível sem distorcer.  */
+}
+
+
+
+
+/*css sobre a barra de vida */
+
+h1 {
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.jogador1 {
+  color: white;
+  border: 20px;
+  padding: 20px;
+  background-color: rgb(0, 0, 0);
+  border-radius: 50px 
+}
+
+.divvida1, .divvida2 {
+  position: absolute;
+
+  width: 30%;
+  padding: 20px;
+  color: black;
+  text-align: center;
+  
+}
+
+.divvida1 {
+  top: 20px;
+  left: 20px;
+}
+
+.divvida2 {
+  top: 20px;
+  right: 20px;
+}
+
+
+/*personagens*/
+
+/* Define o estilo para o container de conteúdo */
+
+
+/* Define o estilo para o container dos GIFs */
+.gif-container {
+  display: flex;
+  justify-content: space-between; /* Distribui os itens horizontalmente */
+  align-items: center; /* Centraliza verticalmente */
+  height: 100vh; /* Ocupa a altura total da viewport */
+}
+
+.gif-item {
+  margin: 10%; /* Margem ao redor dos itens */
+}
+
+.gif-item img {
+  width: 200px; /* Ajuste o valor conforme necessário */
+  height: auto; /* Mantém a proporção da imagem */
+}
+
+/* Inverte a imagem do GIF da direita */
+.gif-item.flipped img {
+  transform: scaleX(-1); /* Inverte horizontalmente a imagem */
+}
+
+
+
+
+
+
+
+
+/*css sobre o footer*/
+
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 80%; /* Define a largura do footer */
+  margin-left: 10%;
+  margin-bottom: 25px;
+  background-color: #000000;
+  padding: 10px; /* Ajuste o padding se necessário */
+  text-align: center;
+  display: flex; /* Use flexbox para layout horizontal */
+  justify-content: space-between; /* Distribui espaço entre os itens */
+  border-radius: 10px 20px 30px 40px;
+}
+
+.botãogeral {
+  display: flex;
+  align-items: center; /* Alinha os itens verticalmente */
+  margin-left: 10%;
+}
+
+.botões1,
+.botões2 {
+  display: flex;
+  flex-direction: column; /* Alinha os botões verticalmente */
+  margin-right: 10px; /* Espaço entre os grupos de botões */
+}
+
+
+.botões2 {
+  margin-top: 10px; /* Ajusta a distância entre os grupos de botões */
+}
+
+.botões3 {
+  display: flex;
+  align-items: center; /* Alinha o botão 'info' verticalmente */
+}
+
+.log {
+  width: 360px; /* Ajuste a largura do contêiner de log */
+  height: 200px; /* Ajuste a altura do contêiner de log */
+  overflow: auto; /* Adiciona barras de rolagem quando necessário */
+  border: 1px solid #ccc; /* Borda para visualização */
+  margin-left: auto; /* Faz com que o contêiner de log fique alinhado à direita */
+  padding: 10px; /* Adiciona algum espaço interno */
+  margin-right: 10%;
+}
+
+p {
+  color: white;
+}
+
+.btn-spacing {
+  margin: 10px;
+}
