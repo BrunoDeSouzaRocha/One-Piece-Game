@@ -1,15 +1,15 @@
-const nomedosbonecos = {
-    personagem1: '',
-    personagem2: ''
-};
+import {nomeDoBoneco1} from './Seleção.js';
+import {nomeDoBoneco2} from './Seleção.js';
 
-export default globalData;
 
 function bonecoescolhido() {
 
+    console.log(nomeDoBoneco1);
+    console.log(nomeDoBoneco2);
+
     /*
-    testeid= document.getElementById('teste')
-    console.log(testeid);
+    const personagem1 = document.getElementById('gif_principal');
+    console.log('personagem1:', personagem1);
 
     const jogador1 = document.getElementById('Nomepersonagem1');
     console.log('jogador1:', jogador1);
@@ -17,17 +17,17 @@ function bonecoescolhido() {
     const jogadornome1 = jogador1.textContent.charAt(0).toUpperCase() + jogador1.textContent.slice(1).toLowerCase();
     console.log('jogadornome1:', jogadornome1);
   
-    const personagem1 = document.getElementById('gif_principal');
-    console.log('personagem1:', personagem1);
-  
+
     const caminho = `personagens/${jogadornome1}/${jogadornome1}.Gif`;
     console.log('caminho:', caminho);
-  
     personagem1.src = caminho;
     console.log('personagem1.src:', personagem1.src);
 
-    
 
+
+
+    const personagem2 = document.getElementById('gif_segundario');
+    console.log('personagem1:', personagem2);    
 
     const jogador2 = document.getElementById('Nomepersonagem2');
     console.log('jogador2:', jogador2);
@@ -35,15 +35,24 @@ function bonecoescolhido() {
     const jogadornome2 = jogador2.textContent.charAt(0).toUpperCase() + jogador2.textContent.slice(1).toLowerCase();
     console.log('jogadornome1:', jogadornome1);
   
-    const personagem2 = document.getElementById('gif_segundario');
-    console.log('personagem1:', personagem2);
-  
+
     const lugar = `personagens/${jogadornome2}/${jogadornome2}.Gif`;
     console.log('caminho:', lugar);
   
-    personagem1.src = lugar;
-    console.log('personagem1.src:', personagem2.src);
-    */
+  
+
+ 
+
+
+        personagem1.src = lugar;
+        console.log('personagem1.src:', personagem2.src);
+
+  
+
+*/
+
+ 
+    
 }
 
 
