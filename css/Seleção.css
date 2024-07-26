@@ -1,0 +1,82 @@
+body {
+    background: url("/background/FundoSunny.jpg") no-repeat center center fixed;
+    background-size: cover;
+    font-family:'One piece',Arial, sans-serif;
+}
+
+@font-face {
+    font-family: 'One piece';
+    src: url('/css/Fonte/one piece font.ttf') ;
+
+    font-weight: normal;
+    font-style: normal;
+}
+
+.character-selection {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+    padding: 0 20px;
+}
+
+.characters-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    gap: 10px;
+    padding: 10px;
+}
+
+.character {
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: border 0.3s;
+}
+
+.character:hover {
+    border: 2px solid white;
+}
+
+.character img {
+    width: 100px;
+    height: 100px;
+}
+
+.primary-character, .secondary-character {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.primary-character h2, .secondary-character h2 {
+    color: white;
+}
+
+.primary-character img, .secondary-character img {
+    width: 260px;
+    height: 240px;
+    margin: 60px;
+}
+
+#proceed-button {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 66px;
+    font-family:'One piece',Arial, sans-serif;
+}
+
+h1,H2{
+    color: white;
+    font-size: 60px;
+}
+
+.player2{
+    transform: scaleX(-1);
+}

@@ -9,6 +9,7 @@ body {
   height: 100vh;
   background: url('/background/fundo.jpeg') no-repeat center center;
   background-size: cover;
+  font-family:'One piece',Arial, sans-serif;
   /* margin: 0; e padding: 0;: Remove as margens e espaçamentos padrões do navegador.
      width: 100vw; e height: 100vh;: Define a largura e a altura do body para 100% da largura e altura da viewport.
      background: Define a imagem de fundo.
@@ -17,15 +18,18 @@ body {
      center center: Centraliza a imagem.
      background-size: cover;: Faz com que a imagem cubra toda a área disponível sem distorcer.  */
 }
+@font-face {
+  font-family: 'One piece';
+  src: url('/css/Fonte/one piece font.ttf') ;
 
+  font-weight: normal;
+  font-style: normal;
+}
 
 
 
 /*css sobre a barra de vida */
 
-h1 {
-  font-family: 'Times New Roman', Times, serif;
-}
 
 .jogador1 {
   color: white;
@@ -138,6 +142,7 @@ h1 {
   margin-left: auto; /* Faz com que o contêiner de log fique alinhado à direita */
   padding: 10px; /* Adiciona algum espaço interno */
   margin-right: 10%;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 p {
