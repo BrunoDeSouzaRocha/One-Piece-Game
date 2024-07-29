@@ -1,6 +1,4 @@
 let primarySelected = false;
-export let nomeDoBoneco1=''
-export let nomeDoBoneco2=''
 
 
 function selectCharacter(characterName) {
@@ -12,11 +10,6 @@ function selectCharacter(characterName) {
     const characterSrc = `personagens/${characterName}/${characterName}.Gif`;
 
 
-    const personagem2 = document.getElementById('gif_segundario');
-    console.log('personagem1:', personagem2);
-    
-    const personagem1 = document.getElementById('gif_principal');
-    console.log('personagem1:', personagem1);
 
     
     
@@ -26,8 +19,7 @@ function selectCharacter(characterName) {
         primaryCharacterImg.alt = characterName;
         NomePersonagem1.textContent = characterName.toUpperCase()
         primarySelected = true;
-        nomeDoBoneco1=characterName
-        console.log(nomeDoBoneco1);
+
 
     } else {
         secondaryCharacterImg.src = characterSrc;
@@ -35,8 +27,7 @@ function selectCharacter(characterName) {
         primarySelected = false;
         NomePersonagem2.textContent = characterName.toUpperCase()
         proceedButton.style.display = 'block';
-        nomeDoBoneco2=characterName
-        console.log(nomeDoBoneco2);
+
 
 
         
