@@ -9,6 +9,8 @@ function selectCharacter(characterName) {
     const NomePersonagem2 = document.getElementById('Nomepersonagem2')
     const characterSrc = `personagens/${characterName}/${characterName}.Gif`;
 
+    
+
 
 
     
@@ -19,6 +21,7 @@ function selectCharacter(characterName) {
         primaryCharacterImg.alt = characterName;
         NomePersonagem1.textContent = characterName.toUpperCase()
         primarySelected = true;
+        localStorage.setItem('NomePersonagem1', characterName);
 
 
     } else {
@@ -27,6 +30,8 @@ function selectCharacter(characterName) {
         primarySelected = false;
         NomePersonagem2.textContent = characterName.toUpperCase()
         proceedButton.style.display = 'block';
+        localStorage.setItem('NomePersonagem2', characterName);
+
 
 
 
