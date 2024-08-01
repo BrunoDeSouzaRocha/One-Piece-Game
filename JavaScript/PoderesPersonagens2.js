@@ -34,8 +34,7 @@ const Descrição_personagem = document.getElementById("Descrição_personagem")
 export function KizaruPoderes() {
 
 
-
-    const gifPersonagem = document.getElementById("gif_principal");
+    const gifPersonagem = document.getElementById("gif_segundario");
     const srcGifPersonagem = 'personagens/Kizaru/Kizaru.Gif';
 
 
@@ -60,20 +59,19 @@ export function KizaruPoderes() {
                 VidaPerdida = Math.floor(Math.random() * (22 - 12)) + 12;
             }
 
-            const NovaVida = (parseInt(localStorage.getItem('VidaJogador2'))) - VidaPerdida;
+            const NovaVida = (parseInt(localStorage.getItem('VidaJogador1'))) - VidaPerdida;
         
         
-            localStorage.setItem('VidaJogador2', NovaVida);
+            localStorage.setItem('VidaJogador1', NovaVida);
         
-            BarraDeVida2.style.width = NovaVida + '%';
-            BarraDeVida2.textContent = NovaVida + '%';
+            BarraDeVida1.style.width = NovaVida + '%';
+            BarraDeVida1.textContent = NovaVida + '%';
             
 
     
             setTimeout(() => {
                 gifPersonagem.src = srcGifPersonagem;
             }, 3000);}
-
 
 
     });
@@ -185,21 +183,24 @@ export function KizaruPoderes() {
     `;
     window.addEventListener('storage', function(event) {
         if (event.key === 'VidaJogador1') {
-    
+            console.log("adsasdasdasdasdasdasdasdasdasdasdasdasdasda"+parseInt(localStorage.getItem('VidaJogador1')));
             BarraDeVida1.style.width = parseInt(localStorage.getItem('VidaJogador1')) + '%';
             BarraDeVida1.textContent = parseInt(localStorage.getItem('VidaJogador1')) + '%';
         }
         if (event.key === 'VidaJogador2') {
+            console.log("QUANDO JFDR 2 PERDE VIDA"+parseInt(localStorage.getItem('VidaJogador2')));
+
     
-            BarraDeVida1.style.width = parseInt(localStorage.getItem('VidaJogador2')) + '%';
-            BarraDeVida1.textContent = parseInt(localStorage.getItem('VidaJogador2')) + '%';
+            BarraDeVida2.style.width = parseInt(localStorage.getItem('VidaJogador2')) + '%';
+            BarraDeVida2.textContent = parseInt(localStorage.getItem('VidaJogador2')) + '%';
         }
     });
+
 }
 
 export function NamiPoderes() {
 
-    const gifPersonagem = document.getElementById("gif_principal");
+    const gifPersonagem = document.getElementById("gif_segundario");
     const srcGifPersonagem = 'personagens/Nami/Nami.Gif';
 
 
@@ -222,24 +223,21 @@ export function NamiPoderes() {
 
             if (chance <= 0.25) { // 25% de chance
 
-                const paralizado= (parseInt(localStorage.getItem('paralizado2'))) + 1;
+                const paralizado= (parseInt(localStorage.getItem('paralizado1'))) + 1;
                 localStorage.setItem('paralizado2', paralizado);
 
                 alert("Nami Paralizou o Inimigo!!!");
     
             } 
 
-            console.log("Vida perdida: " + VidaPerdida);
-            console.log("vida do jogador: " + (parseInt(localStorage.getItem('VidaJogador2'))));
+
+            const NovaVida = (parseInt(localStorage.getItem('VidaJogador1'))) - VidaPerdida;
         
-            const NovaVida = (parseInt(localStorage.getItem('VidaJogador2'))) - VidaPerdida;
         
-            console.log("Nova vida: " + NovaVida);
+            localStorage.setItem('VidaJogador1', NovaVida);
         
-            localStorage.setItem('VidaJogador2', NovaVida);
-        
-            BarraDeVida2.style.width = NovaVida + '%';
-            BarraDeVida2.textContent = NovaVida + '%';
+            BarraDeVida1.style.width = NovaVida + '%';
+            BarraDeVida1.textContent = NovaVida + '%';
             
 
     
@@ -273,6 +271,8 @@ ataque 4- Relâmpago Celestial(ultimate): Nami invoca um raio poderoso do céu, 
 
 `;
 
+
+// Atualizar mensagem quando o localStorage mudar
 window.addEventListener('storage', function(event) {
     if (event.key === 'VidaJogador1') {
 
@@ -285,6 +285,7 @@ window.addEventListener('storage', function(event) {
         BarraDeVida1.textContent = parseInt(localStorage.getItem('VidaJogador2')) + '%';
     }
 });
+
 }
 
 

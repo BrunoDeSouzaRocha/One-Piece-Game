@@ -1,5 +1,5 @@
-import { KizaruPoderes } from "./PoderesPersonagens.js";
-import { NamiPoderes } from "./PoderesPersonagens.js";
+import { KizaruPoderes } from "./PoderesPersonagens2.js";
+import { NamiPoderes } from "./PoderesPersonagens2.js";
 
 
 
@@ -33,11 +33,11 @@ const botão_4 = document.getElementById("botão_ataque_4");
 
 
 
-if ("Kizaru"==NomePersonagem1) {
+if ("Kizaru"==NomePersonagem2) {
     KizaruPoderes()
     
 }
-else if ("Nami"==NomePersonagem1) {
+else if ("Nami"==NomePersonagem2) {
     NamiPoderes()
 } else {
     

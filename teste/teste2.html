@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pagina 2</title>
+</head>
+<body>
+    <h1>Página 2</h1>
+    <p id="mensagem"></p>
+
+    <script>
+        // Função para atualizar a mensagem
+        function atualizarMensagem() {
+            const mensagem = localStorage.getItem('mensagem');
+            document.getElementById('mensagem').innerText = mensagem;
+        }
+
+        // Atualizar mensagem ao carregar a página
+        window.onload = function() {
+            atualizarMensagem();
+        }
+
+        // Atualizar mensagem quando o localStorage mudar
+        window.addEventListener('storage', function(event) {
+            if (event.key === 'mensagem') {
+                atualizarMensagem();
+            }
+        });
+    </script>
+</body>
+</html>
