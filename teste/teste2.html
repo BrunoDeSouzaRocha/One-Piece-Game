@@ -1,30 +1,22 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Pagina 2</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Botões Dependentes</title>
+    <style>
+
+    </style>
 </head>
 <body>
-    <h1>Página 2</h1>
-    <p id="mensagem"></p>
+    <button id="botao1">Botão 1 p2</button>
+    <button id="botao2">Botão 2 p2</button>
+    <button id="botao3">Botão 3 p2</button>
+    <button id="botao4">Botão 4 p2</button>
+    <p id="paragrafo"></p>
 
-    <script>
-        // Função para atualizar a mensagem
-        function atualizarMensagem() {
-            const mensagem = localStorage.getItem('mensagem');
-            document.getElementById('mensagem').innerText = mensagem;
-        }
+    <script type="module" src="teste2.js"></script>
 
-        // Atualizar mensagem ao carregar a página
-        window.onload = function() {
-            atualizarMensagem();
-        }
-
-        // Atualizar mensagem quando o localStorage mudar
-        window.addEventListener('storage', function(event) {
-            if (event.key === 'mensagem') {
-                atualizarMensagem();
-            }
-        });
-    </script>
 </body>
+
 </html>

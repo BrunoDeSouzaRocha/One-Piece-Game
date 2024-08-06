@@ -31,135 +31,71 @@ const Descrição_personagem = document.getElementById("Descrição_personagem")
 
 
 
+
+let UltimaAção1=localStorage.getItem('UltimaAção1')
+let UltimaAção2=localStorage.getItem('UltimaAção2')
+
+
+
+
 export function KizaruPoderes() {
 
-
-
-    const gifPersonagem = document.getElementById("gif_principal");
-    const srcGifPersonagem = 'personagens/Kizaru/Kizaru.Gif';
-
-
-
-
-    botão_1.addEventListener('click', function() {
-
-        gifPersonagem.src = 'personagens/Kizaru/KizaruChuteDeLuz.Gif';
-
+  
         
-
-        
-        let VidaPerdida = Math.floor(Math.random() * (15 - 8)) + 8;
-
-        if (paralizado1>0) {
-            alert("ta paralizado");
+        const gifPersonagem = document.getElementById("gif_principal");
+        const srcGifPersonagem = 'personagens/Kizaru/Kizaru.Gif';
 
 
-        } 
-        else{
-            if(buff1>0){
-                VidaPerdida = Math.floor(Math.random() * (22 - 12)) + 12;
-            }
 
-            const NovaVida = (parseInt(localStorage.getItem('VidaJogador2'))) - VidaPerdida;
-        
-        
-            localStorage.setItem('VidaJogador2', NovaVida);
-        
-            BarraDeVida2.style.width = NovaVida + '%';
-            BarraDeVida2.textContent = NovaVida + '%';
+
+
+        botão_1.addEventListener('click', function() {
+
+
+            document.getElementById("botão_ataque_1").disabled=true
+            document.getElementById("botão_ataque_2").disabled=true
+            document.getElementById("botão_ataque_3").disabled=true
+            document.getElementById("botão_ataque_4").disabled=true
+
+            
+            localStorage.setItem('UltimaAção1', 'true') 
             
 
-    
-            setTimeout(() => {
-                gifPersonagem.src = srcGifPersonagem;
-            }, 3000);}
+            
+            let VidaPerdida = Math.floor(Math.random() * (15 - 8)) + 8;
+
+            if (paralizado1>0) {
+                alert("ta paralizado");
 
 
+            } 
+            else{
+                if(buff1>0){
+                    VidaPerdida = Math.floor(Math.random() * (22 - 12)) + 12;
+                }
+                gifPersonagem.src = 'personagens/Kizaru/KizaruChuteDeLuz.Gif';
 
-    });
-
-
-    botão_2.addEventListener('click', function() {
-
-        gifPersonagem.src = 'personagens/Kizaru/KizaruVooIntangivel.gif';
-        
-         imunidade=imunidade+1
-        
-        localStorage.setItem('ImunePlayer1', imunidade);
-        
-
-
-        setTimeout(() => {
-            gifPersonagem.src = srcGifPersonagem;
-        }, 1400);
-
-    });
-
-
-
-    botão_3.addEventListener('click', function() {
-
-        gifPersonagem.src = 'personagens/Kizaru/KizaruEspiralDeLuz';
-        
-        buff=buff+2
-       
-       localStorage.setItem('buff', buff);
-       
-
-
-       setTimeout(() => {
-           gifPersonagem.src = srcGifPersonagem;
-       }, 1400);
+                const NovaVida = (parseInt(localStorage.getItem('VidaJogador2'))) - VidaPerdida;
+            
+            
+                localStorage.setItem('VidaJogador2', NovaVida);
+            
+                BarraDeVida2.style.width = NovaVida + '%';
+                BarraDeVida2.textContent = NovaVida + '%';
+                
 
         
+                setTimeout(() => {
+                    gifPersonagem.src = srcGifPersonagem;
+                }, 3000);}
 
 
-        setTimeout(() => {
-            gifPersonagem.src = srcGifPersonagem;
-        }, 1400);
-
-    });
-
-    
-    botão_4.addEventListener('click', function() {
-        gifPersonagem.src = 'personagens/Kizaru/KizaruChuteDeLuz.Gif';
+                localStorage.setItem('UltimaAção2', 'false') 
+            
+        });
 
 
-        const verAumento = localStorage.getItem('buff');
-        const VerAutoParalizado=localStorage.getItem('autoparalizado')
-        const VerParalizado=localStorage.getItem('paralizado')
-
-        
-
-        const BarraDeVida = document.getElementById('VidaJogador2');
-        let VidaAtual = parseFloat(BarraDeVida.style.width);
-        let VidaPerdida = Math.floor(Math.random() * (26 - 20)) + 20;
-
-        if (VerAutoParalizado>=1) {
-            console.log("ta paralizado Porra");
-
-            /*temporario*/
-            VerAutoParalizado=VerAutoParalizado-1
-            localStorage.setItem('autoparalizado',VerAutoParalizado=VerAutoParalizado);
-        }
-        else{
-            if(verAumento>=1){
-                VidaPerdida = Math.floor(Math.random() * (39 - 30)) + 30;
-            }
-            console.log(VidaPerdida);
-            const NovaVida = VidaAtual - VidaPerdida;
-    
-            BarraDeVida.style.width = NovaVida + '%';
-            BarraDeVida.textContent = NovaVida + '%';
-    
-            setTimeout(() => {
-                gifPersonagem.src = srcGifPersonagem;
-            }, 3000);}
-
-
-    });
-
-
+}
 
 
 
@@ -191,11 +127,11 @@ export function KizaruPoderes() {
         }
         if (event.key === 'VidaJogador2') {
     
-            BarraDeVida1.style.width = parseInt(localStorage.getItem('VidaJogador2')) + '%';
-            BarraDeVida1.textContent = parseInt(localStorage.getItem('VidaJogador2')) + '%';
+            BarraDeVida2.style.width = parseInt(localStorage.getItem('VidaJogador2')) + '%';
+            BarraDeVida2.textContent = parseInt(localStorage.getItem('VidaJogador2')) + '%';
         }
     });
-}
+
 
 export function NamiPoderes() {
 

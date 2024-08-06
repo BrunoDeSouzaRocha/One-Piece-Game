@@ -44,6 +44,9 @@ function selectCharacter(characterName) {
 
 function ZerandoStatus() {
 
+    // sistema de turno nessa porra
+    localStorage.setItem('UltimaAção1', false) 
+    localStorage.setItem('UltimaAção2', false) 
 
 
     // Inicializando o turno

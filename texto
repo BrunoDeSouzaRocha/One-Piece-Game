@@ -67,3 +67,25 @@ buff de ataque
 
 
 
+
+
+
+Coisas que precisam atualizar ao mesmo tempo/apos os dois apertarem  o botao: 
+
+barra de vida = distribuição do dano 
+Animação
+Log
+
+Adicionar paralizamento 
+Adicionar queimadura
+Adicionar Debuff
+
+Liberar para atacar novamente
+
+
+
+
+--informações ao apertar ataque:
+
+verificar se esta paralizado
+Verificar se esta bufado

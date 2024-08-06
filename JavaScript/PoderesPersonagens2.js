@@ -30,6 +30,9 @@ const botão_4 = document.getElementById("botão_ataque_4");
 const Descrição_personagem = document.getElementById("Descrição_personagem");
 
 
+let UltimaAção2=localStorage.getItem('UltimaAção2')
+
+
 
 export function KizaruPoderes() {
 
@@ -42,14 +45,14 @@ export function KizaruPoderes() {
 
     botão_1.addEventListener('click', function() {
 
-        gifPersonagem.src = 'personagens/Kizaru/KizaruChuteDeLuz.Gif';
+        
 
         
 
         
         let VidaPerdida = Math.floor(Math.random() * (15 - 8)) + 8;
 
-        if (paralizado1>0) {
+        if (paralizado2>0) {
             alert("ta paralizado");
 
 
@@ -58,7 +61,7 @@ export function KizaruPoderes() {
             if(buff1>0){
                 VidaPerdida = Math.floor(Math.random() * (22 - 12)) + 12;
             }
-
+            gifPersonagem.src = 'personagens/Kizaru/KizaruChuteDeLuz.Gif';
             const NovaVida = (parseInt(localStorage.getItem('VidaJogador1'))) - VidaPerdida;
         
         
@@ -198,7 +201,21 @@ export function KizaruPoderes() {
 
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
 export function NamiPoderes() {
+
+
 
     const gifPersonagem = document.getElementById("gif_segundario");
     const srcGifPersonagem = 'personagens/Nami/Nami.Gif';
@@ -206,6 +223,14 @@ export function NamiPoderes() {
 
 
     botão_1.addEventListener('click', function() {
+
+        if (localStorage.getItem('UltimaAção2')=='true') {
+            alert("espere o outro jogador terminar de jogar!")
+            
+        }
+        else{
+        localStorage.setItem('UltimaAção2','true') 
+
 
         gifPersonagem.src = 'personagens/Kizaru/KizaruChuteDeLuz.Gif';
 
@@ -239,16 +264,18 @@ export function NamiPoderes() {
             BarraDeVida1.style.width = NovaVida + '%';
             BarraDeVida1.textContent = NovaVida + '%';
             
+            localStorage.setItem('UltimaAção1', 'false') 
 
     
             setTimeout(() => {
                 gifPersonagem.src = srcGifPersonagem;
             }, 3000);}
 
-
+        }
     });
-
     
+
+
 
 
     botão_1.innerText = "RAIO DEVASTADOR";
