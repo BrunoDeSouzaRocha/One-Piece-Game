@@ -54,8 +54,8 @@ var chance = Math.random();
 export const Nami = {
     botao1: function() {
 
-        localStorage.setItem('DanoP1',Math.floor(Math.random() * (14 - 8)) + 8);
-        localStorage.setItem('AtackGifP1','personagens/Kizaru/KizaruChuteDeLuz.Gif')
+        localStorage.setItem('DanoP2',Math.floor(Math.random() * (14 - 8)) + 8);
+        localStorage.setItem('AtackGifP2','personagens/Kizaru/KizaruChuteDeLuz.Gif')
         localStorage.setItem('LogP2','Nami Coisou')
 
         if (chance <= 0.25) { 
@@ -74,7 +74,7 @@ export const Nami = {
 
     },
 
-    info:function () {
+    info:function () {        
     const info = `
     NAMI:
     <hr>

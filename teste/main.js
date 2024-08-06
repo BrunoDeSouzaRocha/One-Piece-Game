@@ -1,7 +1,3 @@
-export const sexo = {
-    sexoporra: function () {
-        console.log("vai tomar no cu");
-        
-        
-    }
-}
+import  testando  from './js.js';
+
+testando()

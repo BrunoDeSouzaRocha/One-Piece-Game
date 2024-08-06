@@ -22,9 +22,9 @@ KIZARU CONCENTRA UMA QUANTIDADE MASSIVA DE ENERGIA LUMINOSA EM SUAS MÃOS E A LA
 
 ataque 1 -raio:  Nami convoca um raio elétrico poderoso causando entre 8 a 13 de dano, tem 25% de chance de paralisar o inimigo por 1 turno.
 
-ataque 2 - cura:  Nami criar uma névoa revigorante que se cura em 15%, 
+ataque 2 - cura:  Nami criar uma névoa revigorante que se cura em 10%, 
 
-ataque 3-Tempestade Elétrica:   Nami convoca uma tempestade elétrica poderosa Cusando Queimadura por 3 turnos (Queimadura = 5 de dano)
+ataque 3-Tempestade Elétrica:   Nami convoca uma tempestade elétrica poderosa que da 5 de dano por 3 turnos consecutivos 
 
 ataque 4- Relâmpago Celestial(ultimate): Nami invoca um raio poderoso do céu, que atinge um inimigo com precisão fulminante causando entre 18-24 de dano deixando o inimgo Mas ficando um turno sem poder fazer nada
 
@@ -43,49 +43,3 @@ ataque 3- rouba 14% de vida do inimgo e se cura
 
 
 
-
-
-
-
-
-key geral:
-turno
-
-
-
-
-
-Key necessarias e unicas:
-
-mudança de vida
-
-Paralizado
-
-buff de ataque
-
-
-
-
-
-
-
-
-Coisas que precisam atualizar ao mesmo tempo/apos os dois apertarem  o botao: 
-
-barra de vida = distribuição do dano 
-Animação
-Log
-
-Adicionar paralizamento 
-Adicionar queimadura
-Adicionar Debuff
-
-Liberar para atacar novamente
-
-
-
-
---informações ao apertar ataque:
-
-verificar se esta paralizado
-Verificar se esta bufado

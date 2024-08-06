@@ -1,36 +1,14 @@
-import { Kizaru } from './SistemaDePoderesP1.js';
 
 //pega o Nome dos persoangens a vai usar 
 const NomePersonagem1 = localStorage.getItem('NomePersonagem1');
 const NomePersonagem2 = localStorage.getItem('NomePersonagem2');
 
-//botao
-const botão_1 = document.getElementById("botão_ataque_1");
-const botão_2 = document.getElementById("botão_ataque_2");
-const botão_3 = document.getElementById("botão_ataque_3");
-const botão_4 = document.getElementById("botão_ataque_4");
 
 //Esse negocio faz com que seja possivel usar o import em uma variavel
 let PersonagemP1;
 let PersonagemP2;
 
 
-//p1
-if (NomePersonagem1=='Kizaru') { 
-     PersonagemP1=Kizaru
-}
-if (NomePersonagem1=='Nami') {
-
-}
-
-
-//p2
-if (NomePersonagem2=='Kizaru') { 
-    PersonagemP2=Kizaru
-}
-if (NomePersonagem2=='Nami') {
-
-}
 
 
 //Define o local dos gifs 
@@ -96,6 +74,10 @@ const BarraDeVida2 = document.getElementById('VidaJogador2');
 let VidaNovaP2;
 let VidaNovaP1;
 
+
+
+
+
 if (cliqueP1=="true" && cliqueP2=="true") {
     
     //P1
@@ -154,10 +136,6 @@ if (cliqueP1=="true" && cliqueP2=="true") {
     localStorage.setItem('cliqueP2','false')
 
         
-    botão_1.disabled = false;
-    botão_2.disabled = false;
-    botão_3.disabled = false;
-    botão_4.disabled = false;     
 
 
 

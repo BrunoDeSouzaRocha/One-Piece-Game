@@ -22,9 +22,7 @@ if (NomePersonagem2=='Kizaru') {
 }
 if (NomePersonagem2=='Nami') {
     
-    
     PersonagemP2=Nami
-    console.log(PersonagemP2);
     
     botão_1.innerText = "RAIO DEVASTADOR";
     botão_2.innerText = "NÉVOA REVIGORANTE";
@@ -50,6 +48,8 @@ botão_2.addEventListener('click', function() {
     localStorage.setItem('ataqueP2','botao2');
     localStorage.setItem('cliqueP2','true')
 
+
+
 });
 
 botão_3.addEventListener('click', function() {
@@ -67,11 +67,18 @@ botão_4.addEventListener('click', function() {
 });
 
 document.getElementById('infoBotão').addEventListener('click', function() {
+    console.log("ta funcionando?");
+    
     
     PersonagemP2['info']()
     document.getElementById("Descrição_personagem").innerHTML=localStorage.getItem('infoP2')
 
 });
+
+
+
+
+
 
 if (cliqueP2=='true') {
     
@@ -82,6 +89,18 @@ if (cliqueP2=='true') {
     
     
 }
+
+
+if (cliqueP2=='false') {
+    
+    botão_1.disabled = false;
+    botão_2.disabled = false;
+    botão_3.disabled = false;
+    botão_4.disabled = false;        
+    
+    
+}
+
 
 
 

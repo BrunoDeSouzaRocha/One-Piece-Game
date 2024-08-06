@@ -1,6 +1,8 @@
 import { Kizaru } from "./SistemaDePoderesP1.js";
+import { Nami } from "./SistemaDePoderesP1.js";
 
 const NomePersonagem1 = localStorage.getItem('NomePersonagem1');
+
 
 let PersonagemP1;
 const botão_1 = document.getElementById("botão_ataque_1");
@@ -18,6 +20,15 @@ if (NomePersonagem1=='Kizaru') {
      botão_4.innerText = "EXPLOSÃO LUMINOSA";
     
 }
+if (NomePersonagem1=='Nami') {
+    
+    PersonagemP1=Nami
+    
+    botão_1.innerText = "RAIO DEVASTADOR";
+    botão_2.innerText = "NÉVOA REVIGORANTE";
+    botão_3.innerText = "TEMPESTADE FURIOSA";
+    botão_4.innerText = "RAIO CELESTIAL";
+}
 
 
 
@@ -28,6 +39,7 @@ const cliqueP1= localStorage.getItem('cliqueP1')
 
 
 botão_1.addEventListener('click', function() {
+    
     localStorage.setItem('ataqueP1','botao1');
     localStorage.setItem('cliqueP1','true')
     
@@ -68,6 +80,17 @@ if (cliqueP1=='true') {
     
     
 }
+
+if (cliqueP1=='false') {
+    
+    botão_1.disabled = false;
+    botão_2.disabled = false;
+    botão_3.disabled = false;
+    botão_4.disabled = false;        
+    
+    
+}
+
 
 
 
