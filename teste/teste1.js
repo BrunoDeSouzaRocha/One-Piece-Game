@@ -1,7 +1,9 @@
-import { Ataques2 } from './teste2.js';
 
 const paragrafo = document.getElementById("paragrafo");
 
+window.addEventListener('load', function(event) {
+    console.log('cu');
+});
 function executarAcoes() {
     const botao1Clicado = localStorage.getItem('ultimaAcao1') ;
     const botao2Clicado = localStorage.getItem('ultimaAcao2') ;
@@ -83,15 +85,12 @@ export const Ataques1 = {
 
 
 document.getElementById('botao11').addEventListener('click', function() {
-        localStorage.setItem('ultimaAcao1','true');
-        localStorage.setItem('acaoP1', 'botao1');
-        executarAcoes();
+    localStorage.setItem('DanoP1',Math.floor(Math.random() * (15 - 8)) + 8);
     });
 
 document.getElementById('botao22').addEventListener('click', function() {
-    localStorage.setItem('ultimaAcao1','true');
-    localStorage.setItem('acaoP1','botao2');
-    executarAcoes();
+    window.location.reload();
+
 });
 
 document.getElementById('botao33').addEventListener('click', function() {

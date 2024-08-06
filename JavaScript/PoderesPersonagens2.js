@@ -1,3 +1,4 @@
+localStorage.setItem('DanoP1',Math.floor(Math.random() * (15 - 8)) + 8);
 
 let turno = parseInt(localStorage.getItem('turno'));
 turno=Number(turno)
