@@ -1,3 +1,3 @@
-import  testando  from './js.js';
+localStorage.setItem('numero',0)
 
-testando()
+console.log(parseInt(localStorage.getItem('numero'))+5);

@@ -9,15 +9,26 @@ export const Kizaru = {
 
     },
     botao2: function() {
-        console.log("função de ataque do botao 2");
-        
+        localStorage.setItem('DanoP1',0);
+        localStorage.setItem('AtackGifP1','personagens/Kizaru/KizaruVooIntangivel.Gif')
+        localStorage.setItem('ImuniP1', parseInt(localStorage.getItem('ImuniP2'))+1)
+        localStorage.setItem('LogP1','Kizaru Ficou intangivel por 1 turno')
+     
     },
     botao3: function() {
+        localStorage.setItem('DanoP1',0);
+        localStorage.setItem('AtackGifP2','personagens/Kizaru/KizaruVooIntangivel.Gif')
+        localStorage.setItem('BuffP1', parseInt(localStorage.getItem('BuffP1'))+2)
+        localStorage.setItem('LogP1','Kizaru Aumentou seu Dano em 50% por 2 turnos')
 
     },
     botao4: function() {
+        localStorage.setItem('DanoP1',Math.floor(Math.random() * (26 - 20)) + 20);
+        localStorage.setItem('AtackGifP1','personagens/Kizaru/ExplosãoLuminosa.Gif')
+        localStorage.setItem('ParalizamentoP1',parseInt(localStorage.getItem('ParalizamentoP1'))+1)
+        localStorage.setItem('LogP1','Kizaru Lançou uma grande explosao de luz cusando muito dano')
 
-    },
+    },  
 
     info:function () {
         const info = 
@@ -46,7 +57,6 @@ export const Kizaru = {
 
 
 
-var chance = Math.random();
 
 
 
@@ -54,24 +64,37 @@ var chance = Math.random();
 
 export const Nami = {
     botao1: function() {
+        var chance = Math.random();
 
         localStorage.setItem('DanoP1',Math.floor(Math.random() * (14 - 8)) + 8);
         localStorage.setItem('AtackGifP1','personagens/Kizaru/KizaruChuteDeLuz.Gif')
-        localStorage.setItem('LogP1','Nami Coisou')
+        localStorage.setItem('LogP1','Nami Lançou um raio no inimigo')
 
         if (chance <= 0.25) { 
-        localStorage.setItem('ParalizamentoP2',localStorage.getItem('ParalizamentoP2')+1)
+        localStorage.setItem('ParalizamentoP2',parseInt(localStorage.getItem('ParalizamentoP2'))+1)
+        localStorage.setItem('LogP1','Nami Lançou um raio no inimigo e paralizou o inimigo por 1 turno')
+
         } 
 
     },
     botao2: function() {
-        console.log("função de ataque do botao 2");
-        
+        localStorage.setItem('DanoP1',0);
+        localStorage.setItem('AtackGifP1','personagens/Kizaru/KizaruChuteDeLuz.Gif')
+        localStorage.setItem('LogP1','Nami curou 10 de vida')
+        localStorage.setItem('CuraP1',10);        
     },
     botao3: function() {
+        localStorage.setItem('DanoP1',0);
+        localStorage.setItem('AtackGifP1','personagens/Kizaru/KizaruChuteDeLuz.Gif')
+        localStorage.setItem('LogP1','Nami deixou o Inimigo queimando por causa do seu trovão')
+        localStorage.setItem('QueimaduraP2',parseInt(localStorage.getItem('QueimaduraP2'))+3);
 
     },
     botao4: function() {
+        localStorage.setItem('DanoP1',Math.floor(Math.random() * (25 - 18)) + 18);
+        localStorage.setItem('AtackGifP1','personagens/Kizaru/KizaruChuteDeLuz.Gif')
+        localStorage.setItem('LogP1','Nami Lançou um Raio poderoso causando muito dano mas ficando paralizada por 1 turno')
+        localStorage.setItem('ParalizamentoP1',parseInt(localStorage.getItem('ParalizamentoP1'))+1)
 
     },
 

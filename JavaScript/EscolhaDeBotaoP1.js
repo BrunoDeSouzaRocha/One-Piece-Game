@@ -1,5 +1,7 @@
 import { Kizaru } from "./SistemaDePoderesP1.js";
 import { Nami } from "./SistemaDePoderesP1.js";
+import {turno} from "./SistemaDeTurnos.js";
+import { atualizar } from "./SistemaDeTurnos.js";
 
 const NomePersonagem1 = localStorage.getItem('NomePersonagem1');
 
@@ -35,32 +37,39 @@ if (NomePersonagem1=='Nami') {
 
 
 
-const cliqueP1= localStorage.getItem('cliqueP1')
+let cliqueP1= localStorage.getItem('cliqueP1')
 
 
 botão_1.addEventListener('click', function() {
-    
-    localStorage.setItem('ataqueP1','botao1');
+    PersonagemP1['botao1']()
     localStorage.setItem('cliqueP1','true')
-    
+    modificarbotao() 
+    turno()
 });
 
+
 botão_2.addEventListener('click', function() {
-    localStorage.setItem('ataqueP1','botao2');
+    PersonagemP1['botao2']()
     localStorage.setItem('cliqueP1','true')
+    modificarbotao() 
+    turno()
 
 });
 
 botão_3.addEventListener('click', function() {
-    localStorage.setItem('ataqueP1','botao3');
+    PersonagemP1['botao3']()
     localStorage.setItem('cliqueP1','true')
+    modificarbotao() 
+    turno()
 
 
 });
 
 botão_4.addEventListener('click', function() {
-    localStorage.setItem('ataqueP1','botao4');
+    PersonagemP1['botao4']()
     localStorage.setItem('cliqueP1','true')
+    modificarbotao() 
+    turno()
 
 
 });
@@ -68,33 +77,37 @@ botão_4.addEventListener('click', function() {
 document.getElementById('infoBotão').addEventListener('click', function() {
     PersonagemP1['info']()
     document.getElementById("Descrição_personagem").innerHTML=localStorage.getItem('infoP1')
+    
 
 });
 
-if (cliqueP1=='true') {
-    
-    botão_1.disabled = true;
-    botão_2.disabled = true;
-    botão_3.disabled = true;
-    botão_4.disabled = true;        
-    
-    
-}
 
-if (cliqueP1=='false') {
-    
-    botão_1.disabled = false;
-    botão_2.disabled = false;
-    botão_3.disabled = false;
-    botão_4.disabled = false;        
-    
+        
+function modificarbotao() {
+
+        botão_1.disabled = true;
+        botão_2.disabled = true;
+        botão_3.disabled = true;
+        botão_4.disabled = true;        
+        
     
 }
 
 
 
 
+setInterval(atualizar, 1000);
 
 
+
+// para funcionar o infobox
+
+document.getElementById('infoBotão').addEventListener('click', function() {
+    document.getElementById('infoBox').classList.remove('hidden');
+});
+
+document.getElementById('closeBotão').addEventListener('click', function() {
+    document.getElementById('infoBox').classList.add('hidden');
+});
 
 

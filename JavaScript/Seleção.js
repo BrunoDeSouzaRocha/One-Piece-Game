@@ -49,6 +49,10 @@ localStorage.setItem('ParalizamentoP1',0)
 localStorage.setItem('QueimaduraP1',0)
 localStorage.setItem('DebuffP1',0)
 localStorage.setItem('BuffP1',0)
+localStorage.setItem('ImuneP1',0)
+localStorage.setItem('CuraP1',0)
+localStorage.setItem('VidaJogador1',100)
+
 
 //P2
 localStorage.setItem('cliqueP2','false')
@@ -59,6 +63,12 @@ localStorage.setItem('ParalizamentoP2',0)
 localStorage.setItem('QueimaduraP2',0)
 localStorage.setItem('DebuffP2',0)
 localStorage.setItem('BuffP2',0)
+localStorage.setItem('ImuneP2',0)
+localStorage.setItem('CuraP2',0)
+localStorage.setItem('VidaJogador2',100)
+
+
 
 
 }
+

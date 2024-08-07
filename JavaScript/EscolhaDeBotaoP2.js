@@ -1,5 +1,7 @@
 import { Kizaru } from "./SistemaDePoderesP2.js";
 import { Nami } from "./SistemaDePoderesP2.js";
+import {turno} from "./SistemaDeTurnos.js"
+import { atualizar } from "./SistemaDeTurnos.js";
 
 
 const NomePersonagem2 = localStorage.getItem('NomePersonagem2');
@@ -35,40 +37,46 @@ if (NomePersonagem2=='Nami') {
 
 
 
-const cliqueP2= localStorage.getItem('cliqueP2')
+let cliqueP2= localStorage.getItem('cliqueP2')
 
 
 botão_1.addEventListener('click', function() {
-    localStorage.setItem('ataqueP2','botao1');
+    PersonagemP2['botao1']()
     localStorage.setItem('cliqueP2','true')
-    
+    modificarbotao()
+    turno()
+
 });
 
 botão_2.addEventListener('click', function() {
-    localStorage.setItem('ataqueP2','botao2');
+    PersonagemP2['botao2']()
     localStorage.setItem('cliqueP2','true')
-
+    modificarbotao()
+    turno()
 
 
 });
 
 botão_3.addEventListener('click', function() {
-    localStorage.setItem('ataqueP2','botao3');
+    PersonagemP2['botao3']()
     localStorage.setItem('cliqueP2','true')
+    modificarbotao()
+    turno()
 
 
 });
 
 botão_4.addEventListener('click', function() {
-    localStorage.setItem('ataqueP2','botao4');
+    PersonagemP2['botao4']()
     localStorage.setItem('cliqueP2','true')
+    modificarbotao()
+    turno()
+
 
 
 });
 
-document.getElementById('infoBotão').addEventListener('click', function() {
-    console.log("ta funcionando?");
-    
+document.getElementById('infoBotão').addEventListener('click', function() {    
     
     PersonagemP2['info']()
     document.getElementById("Descrição_personagem").innerHTML=localStorage.getItem('infoP2')
@@ -77,34 +85,45 @@ document.getElementById('infoBotão').addEventListener('click', function() {
 
 
 
+function modificarbotao() {
 
 
-
-if (cliqueP2=='true') {
-    
-    botão_1.disabled = true;
-    botão_2.disabled = true;
-    botão_3.disabled = true;
-    botão_4.disabled = true;        
-    
-    
-}
-
-
-if (cliqueP2=='false') {
-    
-    botão_1.disabled = false;
-    botão_2.disabled = false;
-    botão_3.disabled = false;
-    botão_4.disabled = false;        
+        botão_1.disabled = true;
+        botão_2.disabled = true;
+        botão_3.disabled = true;
+        botão_4.disabled = true;        
+        
+        
     
     
 }
 
+window.addEventListener('storage', function(event) {
+    if (cliqueP2=='false') {
+        botão_1.disabled = false;
+        botão_2.disabled = false;
+        botão_3.disabled = false;
+        botão_4.disabled = false;    
+
+    }
+ 
+});
+
+  
 
 
 
+// para funcionar o infobox
+setInterval(atualizar, 1000);
 
 
+
+document.getElementById('infoBotão').addEventListener('click', function() {
+    document.getElementById('infoBox').classList.remove('hidden');
+});
+
+document.getElementById('closeBotão').addEventListener('click', function() {
+    document.getElementById('infoBox').classList.add('hidden');
+});
 
 

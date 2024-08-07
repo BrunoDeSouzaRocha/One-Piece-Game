@@ -1,22 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Botões Dependentes</title>
-    <style>
+    <title>Página 2</title>
+    <script>
+        // Função para verificar o sinal de recarga
+        function verificarRecarregamento() {
+            if (localStorage.getItem('recarregar') === 'true') {
+                // Recarrega a página
+                location.reload();
+            }
+        }
 
-    </style>
+        // Verifica o sinal de recarga quando a página carrega
+        window.onload = verificarRecarregamento;
+
+        // Adiciona um listener para o evento 'storage'
+        window.addEventListener('storage', function(event) {
+            if (event.key === 'recarregar' && event.newValue === 'true') {
+                // Recarrega a página quando o sinal de recarga é detectado
+                location.reload();
+            }
+        });
+    </script>
 </head>
 <body>
-    <button id="botao1">Botão 1 p2</button>
-    <button id="botao2">Botão 2 p2</button>
-    <button id="botao3">Botão 3 p2</button>
-    <button id="botao4">Botão 4 p2</button>
-    <p id="paragrafo"></p>
-
-    <script type="module" src="teste2.js"></script>
-
+    <h1>Página 2</h1>
 </body>
-
 </html>

@@ -1,30 +1,24 @@
 KIZARU:
-
 12-21
-
 ATAQUE 1 - CHUTE DE LUZ:
 KIZARU LANÇA UM PODEROSO CHUTE DE LUZ, CAUSANDO ENTRE 8 A 14 DE DANO.
-
 ATAQUE 2 - VOO INTANGÍVEL:
 KIZARU UTILIZA SUA HABILIDADE DE VOO PARA SE TORNAR INTANGÍVEL POR UM TURNO, TORNANDO-SE IMUNE A DANOS NORMAIS DURANTE ESSE PERÍODO.
-
 ATAQUE 3 - ESPIRAL DE LUZ:
 KIZARU CRIA UMA ESPIRAL DE LUZ AO REDOR DE SI MESMO, AUMENTANDO O SEU PODER DE ATAQUE EM 50% POR 2 TURNOS.
-
 ATAQUE 4 - EXPLOSÃO LUMINOSA (ULTIMATE):
 KIZARU CONCENTRA UMA QUANTIDADE MASSIVA DE ENERGIA LUMINOSA EM SUAS MÃOS E A LANÇA CONTRA UM INIMIGO, CAUSANDO UM DANO EXPLOSIVO. CAUSA 20-25 DE DANO A UM ÚNICO INIMIGO, MAS FICANDO UM TURNO SEM PODER FAZER NADA.
-
-
-
 	
 
-	Nami:
 
+
+	Nami:
 ataque 1 -raio:  Nami convoca um raio elétrico poderoso causando entre 8 a 13 de dano, tem 25% de chance de paralisar o inimigo por 1 turno.
 
-ataque 2 - cura:  Nami criar uma névoa revigorante que se cura em 10%, 
+ataque 2 - cura:  Nami criar uma névoa revigorante que se cura em 15%, 
 
 ataque 3-Tempestade Elétrica:   Nami convoca uma tempestade elétrica poderosa que da 5 de dano por 3 turnos consecutivos 
+ataque 3-Tempestade Elétrica:   Nami convoca uma tempestade elétrica poderosa Cusando Queimadura por 3 turnos (Queimadura = 5 de dano)
 
 ataque 4- Relâmpago Celestial(ultimate): Nami invoca um raio poderoso do céu, que atinge um inimigo com precisão fulminante causando entre 18-24 de dano deixando o inimgo Mas ficando um turno sem poder fazer nada
 
@@ -32,14 +26,43 @@ ataque 4- Relâmpago Celestial(ultimate): Nami invoca um raio poderoso do céu, 
 
 
 
-
 	barba negra:
-
 ataque 3- rouba 14% de vida do inimgo e se cura 
 
 
 
 
 
+key geral:
+turno
+
+Key necessarias e unicas:
+mudança de vida
+Paralizado
+buff de ataque
+Inumidade
+
+cura
 
 
+
+
+
+
+
+Coisas que precisam atualizar ao mesmo tempo/apos os dois apertarem  o botao: 
+
+
+barra de vida = distribuição do dano 
+Animação
+Log
+Adicionar paralizamento 
+Adicionar queimadura
+Adicionar Debuff
+Liberar para atacar novamente
+
+
+
+--informações ao apertar ataque:
+verificar se esta paralizado
+Verificar se esta bufado

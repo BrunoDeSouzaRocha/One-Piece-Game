@@ -1,23 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Botões Dependentes</title>
-    <style>
+    <title>Página 1</title>
+    <script>
+        function atualizar() {
+            // Armazena um sinal de recarga no localStorage
+            localStorage.setItem('recarregar', 'true');
+            // Redefine o sinal de recarga após alguns segundos para permitir que as outras páginas o detectem
+            setTimeout(() => localStorage.removeItem('recarregar'), 1000);
+        }
 
-    </style>
+        // Função para verificar o sinal de recarga
+        function verificarRecarregamento() {
+            if (localStorage.getItem('recarregar') === 'true') {
+                // Recarrega a página
+                location.reload();
+            }
+        }
+
+        // Verifica o sinal de recarga quando a página carrega
+        window.onload = verificarRecarregamento;
+    </script>
 </head>
 <body>
-    <button id="botao11">Botão 1 p1</button>
-    <button id="botao22">Botão 2 p1</button>
-    <button id="botao33">Botão 3 p1</button>
-    <button id="botao44">Botão 4 p1</button>
-
-    <p id="paragrafo"></p>
-    
-    <script type="module" src="teste1.js"></script>
-
+    <h1>Página 1</h1>
+    <button onclick="atualizar()">Recarregar Ambas as Páginas</button>
 </body>
-
 </html>
