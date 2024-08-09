@@ -6,37 +6,19 @@
     <title>Adicionar e Remover Código JavaScript</title>
 </head>
 <body>
-    <h1>Adicionar e Remover Código JavaScript</h1>
-    
-    <button onclick="addLine()">Adicionar Linha</button>
-    <button onclick="removeLine()">Remover Linha</button>
 
-    <script id="dynamic-script">
-    // Código JavaScript inicial
-    console.log('Script carregado');
-    </script>
 
     <script>
-        function addLine() {
-            const scriptElement = document.getElementById('dynamic-script');
-            // Adiciona uma nova linha de código
-            scriptElement.textContent += '\nconsole.log("Nova linha adicionada");';
-        }
+        var chance = Math.random()
+console.log(   chance     );
 
-        function removeLine() {
-            const scriptElement = document.getElementById('dynamic-script');
-            let code = scriptElement.textContent;
-            const lines = code.split('\n');
+var chance = Math.random()
+console.log(   chance     );
 
-            // Verifica se há linhas para remover
-            if (lines.length > 1) {
-                // Remove a última linha (exemplo)
-                lines.pop();
+var chance = Math.random()
+console.log(   chance     );
 
-                // Atualiza o conteúdo do script
-                scriptElement.textContent = lines.join('\n');
-            }
-        }
+
     </script>
 </body>
 </html>

@@ -39,6 +39,8 @@ function selectCharacter(characterName) {
 
 
 function ResetDoLocalStorage() {
+history.replaceState(null, '', 'combate2.html');
+localStorage.setItem('LogGeral','')
 
 //P1
 localStorage.setItem('cliqueP1','false')

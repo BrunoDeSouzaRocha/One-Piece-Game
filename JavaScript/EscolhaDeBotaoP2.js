@@ -1,5 +1,9 @@
 import { Kizaru } from "./SistemaDePoderesP2.js";
 import { Nami } from "./SistemaDePoderesP2.js";
+import { Ace } from "./SistemaDePoderesP2.js";
+import { Zoro } from "./SistemaDePoderesP2.js";
+import { Luffy } from "./SistemaDePoderesP2.js";
+import { Shanks } from "./SistemaDePoderesP2.js";
 import {turno} from "./SistemaDeTurnos.js"
 import { atualizar } from "./SistemaDeTurnos.js";
 
@@ -15,23 +19,57 @@ const botão_4 = document.getElementById("botão_ataque_4");
 
 if (NomePersonagem2=='Kizaru') {
     
-     PersonagemP2=Kizaru
-     botão_1.innerText = "CHUTE DE LUZ";
-     botão_2.innerText = "VOO INTANGÍVEL";
-     botão_3.innerText = "ESPIRAL DE LUZ";
-     botão_4.innerText = "EXPLOSÃO LUMINOSA";
-    
+    PersonagemP2=Kizaru
+    botão_1.innerText = "CHUTE DE LUZ";
+    botão_2.innerText = "VOO INTANGÍVEL";
+    botão_3.innerText = "ESPIRAL DE LUZ";
+    botão_4.innerText = "EXPLOSÃO LUMINOSA";
+   
 }
 if (NomePersonagem2=='Nami') {
-    
-    PersonagemP2=Nami
-    
-    botão_1.innerText = "RAIO DEVASTADOR";
-    botão_2.innerText = "NÉVOA REVIGORANTE";
-    botão_3.innerText = "TEMPESTADE FURIOSA";
-    botão_4.innerText = "RAIO CELESTIAL";
+   
+   PersonagemP2=Nami
+   
+   botão_1.innerText = "RAIO DEVASTADOR";
+   botão_2.innerText = "NÉVOA REVIGORANTE";
+   botão_3.innerText = "TEMPESTADE FURIOSA";
+   botão_4.innerText = "RAIO CELESTIAL";
 }
-
+if (NomePersonagem2=='Ace') {
+   
+   PersonagemP2=Ace
+   
+   botão_1.innerText = "Kyokaen";
+   botão_2.innerText = "MURALHA DE FOGO";
+   botão_3.innerText = "Kagero";
+   botão_4.innerText = "Hiken";
+}
+if (NomePersonagem2=='Zoro') {
+   
+   PersonagemP2=Zoro
+   
+   botão_1.innerText = "Santoryu ";
+   botão_2.innerText = "Flying Slash Attack";
+   botão_3.innerText = "Haki da Observação";
+   botão_4.innerText = "Kyutoryu Asura";
+}
+if (NomePersonagem2=='Luffy') {
+   
+   PersonagemP2=Luffy
+   
+   botão_1.innerText = "GOMU GOMU NO PISTOL";
+   botão_2.innerText = "Gomu Gomu no Rifle";
+   botão_3.innerText = "Red hawk";
+   botão_4.innerText = "Haki Do Rei";
+}if (NomePersonagem2=='Shanks') {
+   
+   PersonagemP2='Shanks'
+   
+   botão_1.innerText = " Busoshoku Haki";
+   botão_2.innerText = "Kenbunshoku Haki";
+   botão_3.innerText = "Haoshoku Haki";
+   botão_4.innerText = "Kamusari";
+}
 
 
 

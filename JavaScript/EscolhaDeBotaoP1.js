@@ -1,5 +1,10 @@
 import { Kizaru } from "./SistemaDePoderesP1.js";
 import { Nami } from "./SistemaDePoderesP1.js";
+import { Ace } from "./SistemaDePoderesP1.js";
+import { Zoro } from "./SistemaDePoderesP1.js";
+import { Luffy } from "./SistemaDePoderesP1.js";
+import { Shanks } from "./SistemaDePoderesP1.js";
+
 import {turno} from "./SistemaDeTurnos.js";
 import { atualizar } from "./SistemaDeTurnos.js";
 
@@ -30,6 +35,41 @@ if (NomePersonagem1=='Nami') {
     botão_2.innerText = "NÉVOA REVIGORANTE";
     botão_3.innerText = "TEMPESTADE FURIOSA";
     botão_4.innerText = "RAIO CELESTIAL";
+}
+if (NomePersonagem1=='Ace') {
+    
+    PersonagemP1=Ace
+    
+    botão_1.innerText = "Kyokaen";
+    botão_2.innerText = "MURALHA DE FOGO";
+    botão_3.innerText = "Kagero";
+    botão_4.innerText = "Hiken";
+}
+if (NomePersonagem1=='Zoro') {
+    
+    PersonagemP1=Zoro
+    
+    botão_1.innerText = "Santoryu ";
+    botão_2.innerText = "Flying Slash Attack";
+    botão_3.innerText = "Haki da Observação";
+    botão_4.innerText = "Kyutoryu Asura";
+}
+if (NomePersonagem1=='Luffy') {
+    
+    PersonagemP1=Luffy
+    
+    botão_1.innerText = "GOMU GOMU NO PISTOL";
+    botão_2.innerText = "Gomu Gomu no Rifle";
+    botão_3.innerText = "Red hawk";
+    botão_4.innerText = "Haki Do Rei";
+}if (NomePersonagem1=='Shanks') {
+    
+    PersonagemP1=Shanks
+    
+    botão_1.innerText = " Busoshoku Haki";
+    botão_2.innerText = "Kenbunshoku Haki";
+    botão_3.innerText = "Haoshoku Haki";
+    botão_4.innerText = "Kamusari";
 }
 
 

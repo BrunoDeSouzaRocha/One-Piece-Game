@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ONE PIECE GAME</title>
+    <link rel="stylesheet" href="/css/Informação.css">
+    <link rel="icon" href="Icone.ico" type="image/x-icon">
+
+</head>
+<body>
+    <div class="character-selection">
+        <div class="primary-character">
+            <img id="primary-character-img" src="" alt="a">
+            <h1 id="Nomepersonagem1"></h1>
+            <a  href="Host_login.html"><button id="proceed-button" onclick="ResetDoLocalStorage()"  >Voltar!</button></a>
+
+        </div>
+        
+        <Div >
+            <P id="InfoPersoangem"></P>
+        </Div>
+        <div class="characters-grid">
+            <div class="character" onclick="selectCharacter('Nami')">
+                <img src="personagens/SelectPersonagens/NamiSelect.png" alt="Nami">
+            </div>
+            <div class="character" onclick="selectCharacter('Kizaru')">
+                <img src="personagens/SelectPersonagens/kizaruSelect.png" alt="Kizaru">
+            </div>
+            <div class="character" onclick="selectCharacter('Ace')">
+                <img src="personagens/SelectPersonagens/AceSelect.png" alt="Ace">
+            </div>
+            <div class="character" onclick="selectCharacter('Zoro')">
+                <img src="personagens/SelectPersonagens/ZoroSelect.png" alt="Zoro">
+            </div>
+            <div class="character" onclick="selectCharacter('Luffy')">
+                <img src="personagens/SelectPersonagens/LuffySelect.png" alt="Luffy">
+            </div>
+            <div class="character" onclick="selectCharacter('Shanks')">
+                <img src="personagens/SelectPersonagens/ShanksSelect.png" alt="Shanks">
+            </div>
+            <div class="character" onclick="selectCharacter('Kizaru')">
+                <img src="personagens/SelectPersonagens/PretoSelect.png" alt="Kizaru">
+            </div>
+            <div class="character" onclick="selectCharacter('Kizaru')">
+                <img src="personagens/SelectPersonagens/PretoSelect.png" alt="Kizaru">
+            </div>
+            <div class="character" onclick="selectCharacter('Kizaru')">
+                <img src="personagens/SelectPersonagens/PretoSelect.png" alt="Kizaru">
+            </div>
+            
+        </div>
+        <Div class="ComoJogar">
+            <h1 class="h1dainfo">Descrição do Jogo</h1>
+    <p>Este é um jogo de batalha por turno 1v1, onde o objetivo é derrotar o oponente utilizando as habilidades únicas de seu personagem escolhido. Cada partida ocorre entre dois jogadores, cada um controlando um personagem. O jogo se desenvolve em turnos, e cada jogador tem a oportunidade de realizar uma ação durante seu turno.</p>
+
+    <p><strong>1. Escolha do Personagem:</strong> Antes do início da batalha, cada jogador seleciona um personagem. Cada personagem possui um conjunto específico de habilidades e características que definem seu estilo de combate.</p>
+
+    <p><strong>2. Ações no Turno:</strong> Durante o jogo, em cada turno, o jogador pode escolher uma ação para seu personagem. As opções podem incluir:</p>
+    <ul>
+        <li><strong>Ataques Gerais:</strong> Os jogadores podem optar por diferentes tipos de ataques que variam em poder e efeito Descrito na informação dos ataques do personagem.</li>
+        <li><strong>Buffs (Melhorias):</strong> Ataques que podem Buffar aumentam o Dano do Personagem em 50%.</li>
+        <li><strong>Debuffs (Enfraquecimento):</strong> Ataques que pode diminuir o Dano do Inimigo em 50%</li>
+        <li><strong>Paralisação:</strong> Ataques que deixam o inimgo impossibilitado de realizar uma ação por uma certa quantidade de turno </li>
+        <li><strong>Queimaduras:</strong> Ataques que causam queimaduras causam 5 de dano por uma certa quantidade de turno  </li>
+    </ul>
+
+    <p><strong>3. Estratégia e Tática:</strong> A chave para vencer reside na escolha estratégica das ações e na gestão eficaz das habilidades do personagem. É importante considerar o tipo de ataque ou efeito que será mais eficaz contra o oponente, bem como planejar a utilização de buffs e debuffs para obter vantagem.</p>
+
+    <p><strong>4. Objetivo da Batalha:</strong> O objetivo final é reduzir a saúde do personagem adversário a zero, enquanto mantém o próprio personagem em condições de combate. A vitória é alcançada quando o oponente não consegue mais lutar.</p>
+
+
+            </P>
+        </Div>
+
+    </div>
+    <script  src="/JavaScript/Informação.js"></script>
+</body>
+</html>
+
